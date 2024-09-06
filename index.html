@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Links Extension - Demo Page</title>
+    <link rel="icon" href="https://extcreator.com/clickablelinks/img/Clickable_icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f2ff; /* 更浅的背景色 */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .banner {
+            background-color: #4258ff; /* 主题色 */
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: white; /* 确保 banner 中的 h1 保持白色 */
+        }
+        h1, h2, h3 {
+            color: #1a2b8f; /* 更深的蓝色，用于正文中的标题 */
+        }
+        .test-case {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(66, 88, 255, 0.1); /* 主题色阴影 */
+        }
+        .icon {
+            margin-right: 10px;
+            color: #4258ff; /* 与主题色一致 */
+        }
+        .btn {
+            display: inline-block;
+            background-color: #4258ff; /* 新的主题色 */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #3446cc; /* 稍深的主题色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1><i class="fas fa-link icon"></i>Clickable Links Extension</h1>
+    </div>
+
+    <div class="container">
+        <h2><i class="fas fa-info-circle icon"></i>Extension Overview</h2>
+        <p>The Clickable Links Extension is a Chrome browser extension that automatically converts plain text URLs, email addresses, and various protocol links into clickable links on web pages.</p>
+
+        <h2><i class="fas fa-question-circle icon"></i>How to Use</h2>
+        <ol>
+            <li>Install the extension from the Chrome Web Store</li>
+            <li>Click on the extension icon in the browser toolbar</li>
+            <li>The extension will automatically process the current page, converting text links into clickable links</li>
+        </ol>
+
+        <h2><i class="fas fa-download icon"></i>Installation Link</h2>
+        <p>Click here to install the extension: <a href="#" target="_blank" class="btn">Chrome Web Store Link</a></p>
+
+        <h2><i class="fas fa-vial icon"></i>Test Cases</h2>
+        <div class="test-case">
+          <h3>Test Case 1: HTTP and HTTPS URLs</h3>
+          <p>Visit http://example.com or https://secure.example.com</p>
+      </div>
+  
+      <div class="test-case">
+          <h3>Test Case 2: FTP and File URLs</h3>
+          <p>Download from ftp://ftp.example.com or access file://localhost/path/to/file.txt</p>
+      </div>
+  
+      <div class="test-case">
+          <h3>Test Case 3: Email Addresses</h3>
+          <p>Contact us at info@example.com or support@company.co.uk</p>
+      </div>
+  
+      <div class="test-case">
+          <h3>Test Case 4: Mailto Links</h3>
+          <p>Send an email: mailto:contact@example.com</p>
+      </div>
+  
+      <div class="test-case">
+          <h3>Test Case 5: Magnet Links</h3>
+          <p>Download torrent: magnet:?xt=urn:btih:123456789abcdef</p>
+      </div>
+      <div class="test-case">
+          <h3>Test Case 6: Mixed Content</h3>
+          <p>Visit https://www.example.com, email info@example.com, or download from ftp://files.example.com. For local files, use file:///C:/path/to/file.txt. Magnet link: magnet:?xt=urn:btih:987654321fedcba</p>
+      </div>
+        
+        <h2><i class="fas fa-user-shield icon"></i>Privacy Statement</h2>
+        <p>The Clickable Links Extension respects user privacy and does not collect, store, or transmit any personal information or browsing data. The extension only processes the text content of the current page when the user actively clicks the extension icon and does not run automatically or process data in the background.</p>
+    </div>
+</body>
+</html>
