@@ -1,117 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clickable Links Extension - Demo Page</title>
-    <link rel="icon" href="https://extcreator.com/clickablelinks/img/Clickable_icon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="icon"
+      href="https://extcreator.com/clickablelinks/img/Clickable_icon.png"
+      type="image/png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f0f2ff; /* 更浅的背景色 */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #f0f2ff; /* 更浅的背景色 */
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .banner {
+        background-color: #4258ff; /* 主题色 */
+        color: white;
+        text-align: center;
+        padding: 40px 0;
+        margin-bottom: 30px;
+      }
+      .banner h1 {
+        margin: 0;
+        font-size: 2.5em;
+        color: white; /* white H1 text */
+      }
+      h1,
+      h2,
+      h3 {
+        color: #1a2b8f; /* darker color for theme title */
+      }
+      .test-case {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(66, 88, 255, 0.1); /* theme shadow */
+      }
+      .icon {
+        margin-right: 10px;
+        color: #4258ff; /* same with theme color */
+      }
+      .btn {
+        display: inline-block;
+        background-color: #4258ff; /* theme color */
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .btn:hover {
+        background-color: #3446cc; /* dark theme */
+      }
+      .btn i {
+        margin-right: 5px;
+      }
+      /* GitHub corner styles */
+      .github-corner{
+        overflow: hidden;
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+      }
+      .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+      }
+      .github-corner svg {
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+        transition: all 0.3s ease;
+      }
+      .github-corner:hover svg {
+        filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.7));
+        transform: scale(1.05);
+      }
+      @keyframes octocat-wave {
+        0%,
+        100% {
+          transform: rotate(0);
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+        20%,
+        60% {
+          transform: rotate(-25deg);
         }
-        .banner {
-            background-color: #4258ff; /* 主题色 */
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-            margin-bottom: 30px;
+        40%,
+        80% {
+          transform: rotate(10deg);
         }
-        .banner h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: white; /* 确保 banner 中的 h1 保持白色 */
+      }
+      @media (max-width: 500px) {
+        .github-corner:hover .octo-arm {
+          animation: none;
         }
-        h1, h2, h3 {
-            color: #1a2b8f; /* 更深的蓝色，用于正文中的标题 */
+        .github-corner .octo-arm {
+          animation: octocat-wave 560ms ease-in-out;
         }
-        .test-case {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(66, 88, 255, 0.1); /* 主题色阴影 */
-        }
-        .icon {
-            margin-right: 10px;
-            color: #4258ff; /* 与主题色一致 */
-        }
-        .btn {
-            display: inline-block;
-            background-color: #4258ff; /* 新的主题色 */
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .btn:hover {
-            background-color: #3446cc; /* 稍深的主题色 */
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="banner">
-        <h1><i class="fas fa-link icon"></i>Clickable Links Extension</h1>
+      <h1><i class="fas fa-link icon"></i>Clickable Links Extension</h1>
     </div>
+
+    <!-- GitHub link -->
+    <a
+      href="https://github.com/PlayerYK/ClickableLinks"
+      class="github-corner"
+      aria-label="View source on GitHub"
+    >
+      <svg
+        width="100"
+        height="100"
+        viewBox="0 0 250 250"
+        style="
+          fill: #151513;
+          color: #fff;
+          position: absolute;
+          top: 0;
+          border: 0;
+          right: 0;
+        "
+        aria-hidden="true"
+      >
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+          d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+          fill="currentColor"
+          style="transform-origin: 130px 106px"
+          class="octo-arm"
+        ></path>
+        <path
+          d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+          fill="currentColor"
+          class="octo-body"
+        ></path>
+      </svg>
+    </a>
 
     <div class="container">
-        <h2><i class="fas fa-info-circle icon"></i>Extension Overview</h2>
-        <p>The Clickable Links Extension is a Chrome browser extension that automatically converts plain text URLs, email addresses, and various protocol links into clickable links on web pages.</p>
+      <!-- Main content -->
+      <h2><i class="fas fa-info-circle icon"></i>Extension Overview</h2>
+      <p>
+        The Clickable Links Extension is a Chrome browser extension that
+        automatically converts plain text URLs, email addresses, and various
+        protocol links into clickable links on web pages.
+      </p>
 
-        <h2><i class="fas fa-question-circle icon"></i>How to Use</h2>
-        <ol>
-            <li>Install the extension from the Chrome Web Store</li>
-            <li>Click on the extension icon in the browser toolbar</li>
-            <li>The extension will automatically process the current page, converting text links into clickable links</li>
-        </ol>
+      <h2><i class="fas fa-question-circle icon"></i>How to Use</h2>
+      <ol>
+        <li>Install the extension from the Chrome Web Store</li>
+        <li>Click on the extension icon in the browser toolbar</li>
+        <li>
+          The extension will automatically process the current page, converting
+          text links into clickable links
+        </li>
+      </ol>
 
-        <h2><i class="fas fa-download icon"></i>Installation Link</h2>
-        <p>Click here to install the extension: <a href="https://chromewebstore.google.com/detail/clickable-links/emgfgmngdnnipikijedfjflafkjkpfln" target="_blank" class="btn">Chrome Web Store Link</a></p>
+      <h2><i class="fas fa-download icon"></i>Installation Link</h2>
+      <p>
+        Click here to install the extension:
+        <a
+          href="https://chromewebstore.google.com/detail/clickable-links/emgfgmngdnnipikijedfjflafkjkpfln"
+          target="_blank"
+          class="btn"
+          ><i class="fab fa-chrome"></i> Clickable Links</a
+        >
+      </p>
 
-        <h2><i class="fas fa-vial icon"></i>Test Cases</h2>
-        <div class="test-case">
-          <h3>Test Case 1: HTTP and HTTPS URLs</h3>
-          <p>Visit http://example.com or https://secure.example.com</p>
-      </div>
-  
+      <h2><i class="fas fa-vial icon"></i>Test Cases</h2>
+      <!-- Test cases -->
       <div class="test-case">
-          <h3>Test Case 2: FTP and File URLs</h3>
-          <p>Download from ftp://ftp.example.com or access file://localhost/path/to/file.txt</p>
+        <h3>Test Case 1: HTTP and HTTPS URLs</h3>
+        <p>Visit http://example.com or https://secure.example.com</p>
       </div>
-  
+
       <div class="test-case">
-          <h3>Test Case 3: Email Addresses</h3>
-          <p>Contact us at info@example.com or support@company.co.uk</p>
+        <h3>Test Case 2: FTP and File URLs</h3>
+        <p>
+          Download from ftp://ftp.example.com or access
+          file://localhost/path/to/file.txt
+        </p>
       </div>
-  
+
       <div class="test-case">
-          <h3>Test Case 4: Mailto Links</h3>
-          <p>Send an email: mailto:contact@example.com</p>
+        <h3>Test Case 3: Email Addresses</h3>
+        <p>Contact us at info@example.com or support@company.co.uk</p>
       </div>
-  
+
       <div class="test-case">
-          <h3>Test Case 5: Magnet Links</h3>
-          <p>Download torrent: magnet:?xt=urn:btih:123456789abcdef</p>
+        <h3>Test Case 4: Mailto Links</h3>
+        <p>Send an email: mailto:contact@example.com</p>
       </div>
+
       <div class="test-case">
-          <h3>Test Case 6: Mixed Content</h3>
-          <p>Visit https://www.example.com, email info@example.com, or download from ftp://files.example.com. For local files, use file:///C:/path/to/file.txt. Magnet link: magnet:?xt=urn:btih:987654321fedcba</p>
+        <h3>Test Case 5: Magnet Links</h3>
+        <p>Download torrent: magnet:?xt=urn:btih:123456789abcdef</p>
       </div>
-        
-        <h2><i class="fas fa-user-shield icon"></i>Privacy Statement</h2>
-        <p>The Clickable Links Extension respects user privacy and does not collect, store, or transmit any personal information or browsing data. The extension only processes the text content of the current page when the user actively clicks the extension icon and does not run automatically or process data in the background.</p>
+
+      <div class="test-case">
+        <h3>Test Case 6: Mixed Content</h3>
+        <p>
+          Visit https://www.example.com, email info@example.com, or download
+          from ftp://files.example.com. For local files, use
+          file:///C:/path/to/file.txt. Magnet link:
+          magnet:?xt=urn:btih:987654321fedcba
+        </p>
+      </div>
+
+      <h2><i class="fas fa-user-shield icon"></i>Privacy Statement</h2>
+      <p>
+        The Clickable Links Extension respects user privacy and does not
+        collect, store, or transmit any personal information or browsing data.
+        The extension only processes the text content of the current page when
+        the user actively clicks the extension icon and does not run
+        automatically or process data in the background.
+      </p>
     </div>
-</body>
+  </body>
 </html>
