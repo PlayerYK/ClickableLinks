@@ -9,7 +9,7 @@ Clickable Links is a browser extension that converts plain text URLs and email a
 - User-activated for better control and performance
 
 ## How to Use
-1. Install the extension from the Chrome Web Store
+1. Install the extension from the Chrome Web Store: [Clickable Links](https://chromewebstore.google.com/detail/clickable-links/emgfgmngdnnipikijedfjflafkjkpfln)
 2. Open any webpage with unclickable links
 3. Click the Clickable Links icon in your toolbar
 4. Enjoy newly clickable links on the page
