@@ -1,5 +1,7 @@
 # Clickable Links Extension
 
+[![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/emgfgmngdnnipikijedfjflafkjkpfln)](https://chromewebstore.google.com/detail/clickable-links/emgfgmngdnnipikijedfjflafkjkpfln)
+
 Clickable Links is a browser extension that converts plain text URLs and email addresses into clickable links, saving you time and improving browsing efficiency.
 
 ## Key Features
